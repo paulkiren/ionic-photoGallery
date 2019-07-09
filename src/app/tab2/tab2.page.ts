@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { Camera, CameraOptions } from "@ionic-native/camera/ngx";
+import { PhotoService } from "../services/photo.service";
 
 @Component({
   selector: "app-tab2",
@@ -8,7 +9,7 @@ import { Camera, CameraOptions } from "@ionic-native/camera/ngx";
 })
 export class Tab2Page {
   currentImage: any;
-  constructor(private camera: Camera) {}
+  constructor(private camera: Camera, public photoService: PhotoService) {}
 
   takePicture() {
     const options: CameraOptions = {
